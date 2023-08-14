@@ -1,0 +1,57 @@
+
+{% extends 'yvfoundation/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+{% block content %}
+
+<div class="container" id="container" style="width:100%;height:100%;padding:5rem;margin:auto;display:flex;flex-direction:column;justify-content:center;padding-bottom:250px">
+<div class="container" style="margin:50px auto">
+        <div class="row my-5">
+        <h4 style="text-align:center;font-family: 'Libre Baskerville', serif;"><span class="first-letter ">C</span>ontact us</h4>
+        </div>
+
+       <div class="row contact-details" >
+       <div class="contact-info col-md-6 col-sm-12 mt-5">
+            <p>Ditsobotla,South Africa<br>
+            073 3444 977<br>
+            yvfoundation1@gmail.com
+            </p>
+       </div>
+       <div class="col-md-6 col-sm-12" >
+           <form class="my-form" action=".">
+         {% csrf_token %}
+
+               <p>{{ form.topic }}</p>
+               <p>{{ form.message }}</p>
+               <p>{{ form.sender }}</p>
+
+
+                <button class="btn btn-primary btn-sm px-5" type="submit" id="sub-btn">submit</button>
+
+            </form>
+       </div>
+       </div>
+
+    </div>
+
+    <div class="modalo p-0" >
+    <div id="contents">
+        <div class="closebar" style="display:flex;justify-content:flex-end;">
+        <button class="close-btn btn ">X</button>
+        </div>
+    <h4 id="feedback"  class="pb-5">Thanks for your feedback.</h4>
+
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-4" style="align-items:center;display:flex;justify-content:space-around;flex-direction:row;margin: 0 auto">
+               <a href="{% url 'yvfoundation:contact' %}" style="font-size:1.6rem;color:blue;display:inline"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    </div>
+
+{% endblock %}
+
+

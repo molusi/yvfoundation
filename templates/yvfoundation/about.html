@@ -1,0 +1,32 @@
+{% extends 'yvfoundation/index.html' %} {% load static %} {% static "images" as baseUrl %}
+{% block content %}
+
+
+<div class="container" style="height:90%;display:flex;justify-content:center;flex-direction:column;align-items:center;margin-bottom:0;padding-bottom:100px">
+
+      <div class="row " style="display:flex;justify-content:center;align-items:center;margin:8% auto">
+        <div class="about-info py-0 my-0 col-md-6 col-sm-12"  >
+            <p class="text-center ">
+                <div class="row mb-5 mt-0">
+        <h4 style="text-align:center;font-family:italic;font-family: 'Libre Baskerville', serif;"><span class="first-letter ">A</span>bout</h4>
+        </div>
+            <p>
+                <b>YV Foundation</b> is a non-profit organization which was established in 2020 by a group of 4 young women aged
+                “between” 23 to 34, who want to help with youth development and raise awareness around Gender Based Violence in mainly
+                disadvantaged communities in South Africa. The organization addresses social issues such as unemployment and
+                gender based violence.
+
+            </p>
+
+        </div>
+
+      </div>
+    <div class="col-md-4" style="align-items:center;display:flex;justify-content:space-around;flex-direction:row;margin: 0 auto">
+<a href="{% url 'yvfoundation:home' %}" style="font-size:1.4rem;color:black;display:inline"><i class="fa-solid fa-house"></i></a>
+              <a href="{% url 'yvfoundation:contact' %}" style="font-size:1.4rem;color:black;display:inline"> <i class="fa-solid fa-envelope"></i></a>
+               <a href="{% url 'yvfoundation:contact' %}" style="font-size:1.6rem;color:blue;display:inline"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+
+        </div>
+
+{% endblock %}
